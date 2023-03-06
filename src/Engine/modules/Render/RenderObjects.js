@@ -48,7 +48,7 @@ const RenderObjects = (props) => {
         if(className === "TImage") DrawImage({obj, pos});
         //Draw Shape
         if(className === "TShape") DrawShape({obj, pos});
-        
+        console.log(className);
         //Draw hitbox for object
         DrawHitbox({obj, pos});
 
