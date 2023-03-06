@@ -67,10 +67,30 @@ Done.
 
 ### `AssetLoader`
 
+[ Object ] Loading assets (static/animation). /
+You can see template in Engine/content/assetDefault
+
 ### `SceneEditor`
+
+[ Object ] Any manipulations with scenes and objects. Init new scene/object, remove and other.\
+You can see template in Engine/content/sceneDefault
 
 ### `Camera`
 
+[ Object ] It stores camera settings and methods
+
 ### `hook: useCanvas`
 
+Getting access to canvas and context. { ctx, canvas }
+
 ### `hook: useEvent`
+
+Use only in component Canvas. Hook sends canvas events to objects in canvas.
+
+### `store: objectStore`
+
+[ Object ] Here storing all objects for render at current scene
+
+### `store: engineStore`
+
+[ Object ] Engine settings
