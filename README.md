@@ -23,7 +23,7 @@ Just use mouse wheel.
 ### `On/Off debag mode`
 
 Click Ctrl + LMB on space.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When debag is on, you can see system information and objects hitbox area (green lines around of objects).
 
 ### `npm run eject`
 
