@@ -42,13 +42,12 @@ const RenderObjects = (props) => {
             ctx.translate(-(pos.x+obj._w/2), -(pos.y+obj._h/2))
         }
 
-        const className = obj.constructor.name;
+        const className = obj._objtype;
 
         //Draw Image
         if(className === "TImage") DrawImage({obj, pos});
         //Draw Shape
         if(className === "TShape") DrawShape({obj, pos});
-        console.log(className);
         //Draw hitbox for object
         DrawHitbox({obj, pos});
 
