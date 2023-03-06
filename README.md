@@ -4,32 +4,26 @@ You can testing live demo: [Test Demo](https://github.com/facebook/create-react-
 
 ![alt text](https://github.com/cardinaltroy/rc2-engine/blob/main/scrn1.jpg?raw=true)
 
-## Available Scripts
+## Default control & hotkey
 
-In the project directory, you can run:
+In the engine directory, you can use:
 
-### `npm start`
+### `Move camera`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Click LMB (LeftMouseButton) on space or RMB on any object.\
+Then thecamera will move to click point or center of object.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### `Zoom`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Just use mouse wheel.
 
-### `npm run build`
+### `On/Off debag mode`
 
-Builds the app for production to the `build` folder.\
+Click Ctrl + LMB on space.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
 
