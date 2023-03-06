@@ -63,6 +63,14 @@ export default Canvas;
 ```
 Done.
 
-### Code Splitting
+### What modules are already there?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### `AssetLoader`
+
+### `SceneEditor`
+
+### `Camera`
+
+### `hook: useCanvas`
+
+### `hook: useEvent`
