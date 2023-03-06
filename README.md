@@ -1,6 +1,6 @@
 # Getting Started with RC2 Engine
 
-You can testing live demo: [Test Demo](https://github.com/facebook/create-react-app).
+You can testing live demo: [Test Demo](https://idyllic-ganache-2809ec.netlify.app/).
 
 ![alt text](https://github.com/cardinaltroy/rc2-engine/blob/main/scrn1.jpg?raw=true)
 
