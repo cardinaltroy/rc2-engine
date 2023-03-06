@@ -26,11 +26,41 @@ When debag is on, you can see system information and objects hitbox area (green 
 
 LMB - select objects, RMB - move camera to center object, DoubleClick - delete object
 
-## Learn More
+## Simple start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+All what you need its create Canvas component:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```js
+import './Canvas.css';
+import { Start } from '../../Engine';
+import { useEvents } from '../../Engine/hooks/useEvents';
+import { useEffect } from 'react';
+
+const Canvas = () => {
+
+    //Getting handlers for events
+    const { setEvent } = useEvents();
+    
+    // Starting engine after rendered canvas
+    useEffect(() => Start(), [])
+
+    return (
+        <canvas
+            onClick={setEvent}
+            onDoubleClick={setEvent}
+            onContextMenu={setEvent}
+            onMouseMove={setEvent}
+            onWheel={setEvent}
+
+            height={window.innerHeight}
+            width={window.innerWidth}
+            id="canvas"
+        >Your browser not support canvas</canvas>
+    );
+};
+
+export default Canvas;
+```
 
 ### Code Splitting
 
