@@ -6,7 +6,7 @@ You can testing live demo: [Test Demo](https://idyllic-ganache-2809ec.netlify.ap
 
 ## Default control & hotkey
 
-In the engine directory, you can use:
+In the engine, you can use:
 
 ### `Move camera`
 
