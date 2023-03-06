@@ -28,7 +28,7 @@ LMB - select objects, RMB - move camera to center object, DoubleClick - delete o
 
 ## Simple start
 
-All what you need its create Canvas component:
+All what you need its copy folder "Engine" to your project and create Canvas component:
 
 ```js
 import './Canvas.css';
@@ -61,6 +61,7 @@ const Canvas = () => {
 
 export default Canvas;
 ```
+Done.
 
 ### Code Splitting
 
