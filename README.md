@@ -1,6 +1,6 @@
 # Getting Started with RC2 Engine
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can testing live demo: [Test Demo](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
