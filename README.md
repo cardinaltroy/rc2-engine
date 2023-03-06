@@ -63,7 +63,7 @@ export default Canvas;
 ```
 Done.
 
-### What modules are already there?
+## What modules are already there?
 
 ### `AssetLoader`
 
