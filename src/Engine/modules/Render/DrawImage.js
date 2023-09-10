@@ -1,5 +1,5 @@
 import { useCanvas } from "../../hooks/useCanvas";
-import AssetLoader from "../AssetLoader";
+import AssetLoader from "../AssetManager";
 
 const DrawImage = (props) => {
     const { ctx } = useCanvas();

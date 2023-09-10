@@ -1,4 +1,4 @@
-import SceneEditor from "../modules/SceneEditor";
+import SceneEditor from "../modules/SceneManager";
 import Camera from "../modules/Camera";
 
 class TObject{

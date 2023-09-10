@@ -1,5 +1,5 @@
-import SceneEditor from "./SceneEditor";
-import AssetLoader from "./AssetLoader";
+import SceneEditor from "./SceneManager";
+import AssetLoader from "./AssetManager";
 
 
 const updateFrame = (object, model) => {

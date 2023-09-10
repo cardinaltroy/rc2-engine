@@ -4,7 +4,6 @@ import RenderDebag from "./RenderDebag";
 import RenderUI from "./RenderUI";
 
 const RenderStart = (props) => {
-    const { ctx, canvas } = useCanvas();
     let [fpsCounter, lastDate] = [0, Date.now()];
     let fps = 0;
 
@@ -24,25 +23,30 @@ const RenderStart = (props) => {
 
 
 
-        
+
     //RENDER CANVAS
 
-    const render = () => {
+    const Render = () => {
+        requestAnimationFrame(Render);
         
+
+        const { ctx, canvas } = useCanvas();
+
+        if (canvas === null) return;
+
         //Clear previously layer
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        RenderObjects({});  
 
-        RenderDebag({fps});
+        RenderObjects({});
+
+        RenderDebag({ fps });
 
         RenderUI({});
-        
+
         updateFps();
-        requestAnimationFrame(render);
     }
 
-    render();
+    Render();
 }
 
 export default RenderStart

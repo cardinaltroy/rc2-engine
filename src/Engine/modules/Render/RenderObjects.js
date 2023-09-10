@@ -2,7 +2,7 @@ import { UserToScreen } from "../Calc";
 import { useCanvas } from "../../hooks/useCanvas";
 import { useEvents } from "../../hooks/useEvents";
 import Camera from "../Camera";
-import SceneEditor from "../SceneEditor";
+import SceneEditor from "../SceneManager";
 import DrawImage from "./DrawImage";
 import DrawShape from "./DrawShape";
 import DrawHitbox from "./DrawHitbox";

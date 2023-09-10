@@ -1,5 +1,5 @@
 //import Camera from "./Camera";
-import SceneEditor from "./SceneEditor";
+import SceneEditor from "./SceneManager";
 import { UpdateAnimation } from "./AnimationHandler";
 
 //Game Speed

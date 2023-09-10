@@ -1,6 +1,6 @@
 import { useCanvas } from "../../hooks/useCanvas";
 import Camera from "../Camera";
-import SceneEditor from "../SceneEditor";
+import SceneEditor from "../SceneManager";
 import EngineStore from "../../stores/engineStore";
 
 const RenderDebag = (props) => {
