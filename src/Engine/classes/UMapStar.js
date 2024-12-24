@@ -1,7 +1,6 @@
 import EngineStore from "../stores/engineStore";
 import UserStore from "../stores/userStore";
 import TImage from "./TImage";
-import TShape from "./TShape";
 
 class UMapStar extends TImage {
     constructor(props) {

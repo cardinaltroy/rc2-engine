@@ -1,7 +1,6 @@
 import Camera from "./Camera";
 import EngineStore from "../stores/engineStore";
 import UserStore from "../stores/userStore";
-import SkyboxManager from "./SkyboxManager";
 
 class CHandler {
     constructor() { // only read!
@@ -48,6 +47,7 @@ class CHandler {
                 break;
             case "Space":
                 UserStore._speed = UserStore._speed === 0 ? 2 : 0
+                break;
             default:
                 console.log(e.props.code)
         }

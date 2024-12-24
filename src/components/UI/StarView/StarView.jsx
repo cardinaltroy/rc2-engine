@@ -11,7 +11,7 @@ const StarView = observer(() => {
     let img = AssetManager.getOne(target._model)
     return (
         <div className='UI StarView'>
-            <img src={img.path} />
+            <img src={img.path} alt='target' />
         </div>
     );
 });

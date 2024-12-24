@@ -1,5 +1,4 @@
 import { useCanvas } from "../../hooks/useCanvas"
-import RenderObjects from "./RenderObjects"
 import RenderDebag from "./RenderDebag"
 import RenderUI from "./RenderUI"
 import EngineStore from "../../stores/engineStore"

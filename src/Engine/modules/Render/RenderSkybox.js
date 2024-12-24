@@ -1,5 +1,4 @@
 import { useCanvas } from "../../hooks/useCanvas"
-import EngineStore from "../../stores/engineStore"
 import AssetManager from "../AssetManager"
 import { ToRadian } from "../Calc"
 import SkyboxManager from "../SkyboxManager"
