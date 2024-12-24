@@ -1,11 +1,11 @@
 export function useCanvas() {
     const canvas = document.getElementById("canvas");
-    const ctx = canvas !== null 
+    const ctx = canvas !== null
         ? canvas.getContext("2d")
         : false;
 
-    return { 
-        canvas,
-        ctx
-    }
+    const offCanvas = new OffscreenCanvas(1024, 1024);
+    const offCtx = offCanvas.getContext('2d');
+
+    return { canvas, ctx, offCanvas, offCtx }
 }

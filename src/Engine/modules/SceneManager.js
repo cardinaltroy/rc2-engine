@@ -1,68 +1,91 @@
 import objectStore from "../stores/objectStore";
+import { GetObjectState } from "./Calc";
 
 
-class sceneEditor{
-    constructor(){
+class sceneManager {
+    constructor() {
         this._current = '';
         this._scenes = new Map();
     }
 
-    get getCurrentScene(){
+    get getCurrentScene() {
         return this._current;
     }
 
-    initScene(props){   // expect {scene,objects}
+    initScene(props) {   // expect {scene,objects}
         const store = new objectStore();
         store.setListObjects(props.objects);
 
         this._scenes.set(props.scene, store);
-        this._current = props.scene;
+        if (this._current === '') this._current = props.scene;
     }
-    showScene(scene){
-        if(!this._scenes.has(scene)) return;
+    initScenes(list){
+        for (const key in list) {
+            this.initScene(list[key])
+        }
+    }
+    showScene(scene) {
+        if (!this._scenes.has(scene)) return;
 
         return this._current = scene;
     }
 
-    spawnObjects(props){    // expect [{},{},{}]
-        if(!props) return;
+    spawnObjects(props) {    // expect [{},{},{}]
+        if (!props) return;
 
-        const scene = this._scenes.get( this._current );
-        scene.setListObjects(props);
+        const scene = this._scenes.get(this._current);
+        return scene.setListObjects(props);
     }
-    removeObject(props){    // expect {name}
-        if(!props) return;
+    removeObject(props) {    // expect {name}
+        if (!props) return;
 
-        const scene = this._scenes.get( this._current );
+        const scene = this._scenes.get(this._current);
         scene.delObject(props);
-    }   
+    }
 
-    getObject(props){   // expect {name}
-        if(!props || (this._current === '')) return;
-        
-        const scene = this._scenes.get( this._current );
+    getObject(props) {   // expect {name}
+        if (!props || (this._current === '')) return;
+
+        const scene = this._scenes.get(this._current);
         return scene.getObject(props)
     }
 
-    getObjects(){
-        if(this._current === '') return false;
+    getObjects() {
+        if (this._current === '') return false;
 
-        const scene = this._scenes.get( this._current );
+        const scene = this._scenes.get(this._current);
         return scene.getObjects;
     }
-    
-    getCountObjects(){
-        if(this._current === '') return false;
-        
-        const scene = this._scenes.get( this._current );
+
+    getCountObjects() {
+        if (this._current === '') return false;
+
+        const scene = this._scenes.get(this._current);
         return scene.getSize();
     }
 
+    relocateObject(props) {
+        const { name, from, to } = props;
 
+        //Get obj state and remove him from scene
+        const sceneFrom = this._scenes.get(from);
+        const targetState = GetObjectState(sceneFrom.getObject({ name }), ['_name']);
+        sceneFrom.delObject({ name });
 
+        //Spawn and set state to obj
+        const sceneTo = this._scenes.get(to);
+        const nameObj = sceneTo.setListObjects([
+            { class: 'TShip' }
+        ])
+        const newObj = sceneTo.getObject({ name: nameObj[0] })
+        Object.assign(newObj, JSON.parse(targetState))
+
+        // Return object name
+        return nameObj[0]
+    }
 
 }
 
 
-const SceneEditor = new sceneEditor();
-export default SceneEditor;
+const SceneManager = new sceneManager();
+export default SceneManager;

@@ -1,4 +1,4 @@
-class assetLoader {
+class AssetLoader {
     constructor() {
         this._assets = new Map();
     }
@@ -28,5 +28,5 @@ class assetLoader {
 }
 
 
-const AssetLoader = new assetLoader();
-export default AssetLoader;
+const AssetManager = new AssetLoader();
+export default AssetManager;

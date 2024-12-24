@@ -1,0 +1,18 @@
+.StarView {
+    pointer-events: none;
+    width: 20vh;
+    height: 20vh;
+    top: 15px;
+    left: calc(50vw - 15vh - 15px);
+    padding: 30px;
+    overflow: hidden;
+    border: 1px dashed rgba(255, 255, 255, 0.238);
+    border-radius: 50%;
+
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+
+}

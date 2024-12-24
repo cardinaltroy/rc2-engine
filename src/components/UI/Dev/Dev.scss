@@ -1,0 +1,22 @@
+.Dev {
+    user-select: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    left: 20px;
+    top: 20px;
+    pointer-events: none;
+    .button{
+        margin: 5px;
+        display: flex;
+        .title{
+            border-radius: 5px;
+            background-color: #fff;
+            color: black;
+            padding: 5px;
+            text-align: center;
+            min-width: 40px;
+            font-weight: bold;
+            font-size: 70%;
+            margin-right: 5px;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.Menu {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('menu.png');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    .listbox {
+        position: absolute;
+        bottom: 0;
+        margin: 5%;
+
+        .logo {
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 1%, #2a2a2c65 50%, rgba(255, 255, 255, 0) 99%);
+            font-size: 175%;
+            padding: 11px 0;
+            width: 220px;
+            text-align: center;
+        }
+
+        .button {
+            border: 1px solid #5459624c;
+            border-radius: 2px;
+            margin-top: 15px;
+            padding: 11px 0;
+            width: 220px;
+            text-align: center;
+            background-color: #2a2a2c2b;
+            box-shadow: 2px 2px 3px #31313130;
+            position: relative;
+
+            &:hover {
+                transform: scale(1.05);
+                transition: all 0.5s;
+                text-shadow: #FC0 1px 0 10px;
+            }
+            &::after{
+                content: "";
+                width:15px;
+                height: 1px;
+                position: absolute;
+                background-color: #545962;
+                right: 5px;
+                top: 5px;
+            }
+        }
+    }
+}

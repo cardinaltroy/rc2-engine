@@ -40,7 +40,8 @@ export function useEvents() {
                 ctrlKey: e.ctrlKey,
                 shiftKey: e.shiftKey,
                 altKey: e.altKey,
-                deltaY: e.deltaY
+                deltaY: e.deltaY,
+                code: e.code,
             }
         }
     }

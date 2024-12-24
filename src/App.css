@@ -3,3 +3,7 @@ body{
     background: #111111;
     color: white;
 }
+a{
+    color: white;
+    text-decoration: none;
+}

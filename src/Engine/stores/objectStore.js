@@ -1,6 +1,8 @@
 import TObject from '../classes/TObject';
 import TImage from '../classes/TImage';
 import TShape from '../classes/TShape';
+import UMapStar from '../classes/UMapStar';
+import TEffect from '../classes/TEffect';
 
 class objectStore{
     constructor(){
@@ -33,13 +35,28 @@ class objectStore{
 
     //Add new objects to scene
     setListObjects(list){
+        let result = [];
+        
         for(const obj of list){
-            obj.name = 'object'+this.getUID;
+            const name = 'object' + this.getUID;
+            const store = this._objects;
 
-            if(obj.class === "TObject") this._objects.set(obj.name, new TObject(obj));
-            if(obj.class === "TImage") this._objects.set(obj.name, new TImage(obj));
-            if(obj.class === "TShape") this._objects.set(obj.name, new TShape(obj));
+            obj.name = name;
+            result.push(name);
+
+            const classMap = {
+                TObject: TObject,
+                TShape: TShape,
+                TImage: TImage,
+                TEffect: TEffect,
+                UMapStar: UMapStar,
+            };
+
+            if (classMap.hasOwnProperty(obj.class)) {
+                store.set(obj.name, new classMap[obj.class](obj));
+            }
         }
+        return result;
     }
 }
 
