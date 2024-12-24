@@ -24,6 +24,22 @@ Game objects on Canvas at now is clickable and etc. Almost all reat events trans
 
 [ Object ] Add/Remove objects, load/change scenes, etc
 
+### `SkyboxManager`
+
+[ Object ] Sun light, background
+
+### `CanvasHandler(Manager)`
+
+[ Object ] For managing key events
+
+### `AnimationManager`
+
+[ Object ] Calculate anaimation. Need rework
+
+### `StateManager`
+
+[ Object ] Updating game states for objects if they have update() method
+
 ### `Camera`
 
 [ Object ] Just camera
