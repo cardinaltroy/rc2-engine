@@ -2,7 +2,7 @@
 
 You can testing live demo: [Demo build at 03.2023](https://idyllic-ganache-2809ec.netlify.app/).
 
-![alt text](https://github.com/cardinaltroy/rc2-engine/blob/main/scrn1.jpg?raw=true)
+![alt text](https://github.com/cardinaltroy/rc2-engine/blob/spacetravel/12.png?raw=true)
 
 ### `Interaction with objects`
 
